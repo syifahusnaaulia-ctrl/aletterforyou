@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:linear-gradient(135deg,#f8c8dc,#f3b5b5);
+    font-family:'Poppins', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 0;
+    overflow-x:hidden;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    color:white;
+    font-size:18px;
+    animation:floatUp linear forwards;
+    opacity:0.7;
+    z-index:0;
+}
+
+@keyframes floatUp{
+    from{ transform:translateY(100vh) scale(0.6); opacity:0; }
+    30%{ opacity:0.8; }
+    to{ transform:translateY(-10vh) scale(1.2); opacity:0; }
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+/* Login Card */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+.card.shake{
+    animation:shake 0.4s;
+}
+
+@keyframes shake{
+    0%{ transform:translateX(0); }
+    25%{ transform:translateX(-6px); }
+    50%{ transform:translateX(6px); }
+    75%{ transform:translateX(-6px); }
+    100%{ transform:translateX(0); }
+}
+
+h2{
+    font-family:'Playfair Display', serif;
+    color:#d46a92;
+}
+
+input{
+    width:85%;
+    padding:12px;
+    border-radius:15px;
+    border:1px solid #ddd;
+    margin-top:15px;
+    font-size:15px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    margin-top:15px;
+    cursor:pointer;
+    background:#d46a92;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Letter Box */
+.letter{
+    display:none;
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    opacity:0;
+    transform:translateY(30px) scale(0.95);
+    transition:all 1s ease;
+    max-height:80vh;
+    overflow-y:auto;
+    box-shadow:0 0 0 rgba(212,106,146,0);
+}
+
+.letter.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    box-shadow:0 0 25px rgba(212,106,146,0.3);
+}
+
+.letter h3{
+    font-family:'Playfair Display', serif;
+    color:#d46a92;
+}
+
+.letter p{
+    font-size:14px;
+    line-height:1.7;
+    color:#555;
+    white-space:pre-line;
+    text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div class="card" id="loginBox">
+        <h2>Enter Password</h2>
+        <input type="password" id="passwordInput" placeholder="enter here">
+        <br>
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <!-- LETTER -->
+    <div class="letter" id="letterBox">
+           <h3>For You 💌</h3>
+        <p>
+Hi again Fajar HAHAHA. yippieeu congrats u found the right password! (btw, the numbers in the password are our date of birth hehe :3) yang ini bakal agak panjang, jadi aku saranin baca nya boleh sambil dengerin lagu di playlist spotify yang aku buat yaa. Here we go!
+                          
+          O1. Firstly, i want to say that i am very lucky to know u. Aku sebelumnya belum pernah di deketin cowo yang se effort ini sama aku. So, congratulations to you, congratulations for what? Congratulations for making me feel like the luckiest girl who experiences falling in love with a guy (you) HAHAHA. 
+           O2. Second, kalau kamu tau semua orang di sekolah hampir tau kita berdua kan? terus mungkin orang lain bakal bilang, "Kok tiba tiba deket?" Emang bener dan aku juga kaget hehe kalau kita bisa se deket ini dari yang awal kita bisa dibilang asing...? Rasanya kenal kamu tuh kayak nemu sesuatu yang nggak sengaja, tapi pas banget. Kayak obrolan kita tetep nyambung nyambung aja kan walau kita belum saling kenal lebih dalem?
+          O3.  Third, sejujurnya, yang bikin aku makin ngerasa beruntung itu karena kamu beda dari kebanyakan cowok yang pernah aku kenal. Bukan soal cuman gaya doang, there are many interesting things about yourself that maybe yourself not knowing about that. Terus bukan cara ngomongnya aja, tapi cara kamu mikir, cara kamu memperlakukan orang, dan cara kamu yang terus nawarin bantuan ke aku. Kamu tuh ya, punya cara kamu sendiri yang nggak dibuat-buat, dan justru itu yang bikin semuanya beda dan menarik.
+          O4.  Fourth, kayaknya seru deh kalau kita bisa lebih deket lagi. Lebih jujur, lebih terbuka, pokoknya saling kenal lebih dalam. Tapi aku gamau lewat orang lain (kayak misalnya dari temen kamu) aku pengennya tau tentang diri kamu, ya dari kamu nya langsung. Terus aku juga pengen jadi tempat yang bikin kamu ngerasa aman buat cerita. So if one day you need someone to talk to or just want some company, just chat and tell me okay? and please remember that i'm always here for u ♡ 
+
+so, maybe this is just a simple page,
+but i hope when u read this,
+u know that many someone (including me),
+who cares about u more than u think. 
+once again, Happy Valentine Day's Fajar.
+thank u for read this rather long text hehe. see u again!
+        </p>
+    </div>
+
+</div>
+
+<script>
+const correctPassword = "0505";
+
+function checkPassword(){
+    let input = document.getElementById("passwordInput").value.trim();
+    const card = document.getElementById("loginBox");
+
+    if(input === correctPassword){
+        card.style.opacity="0";
+        setTimeout(()=>{
+            card.style.display="none";
+            const letter = document.getElementById("letterBox");
+            letter.style.display="block";
+            setTimeout(()=> letter.classList.add("show"),100);
+        },400);
+    } else {
+        card.classList.add("shake");
+        setTimeout(()=> card.classList.remove("shake"),400);
+    }
+}
+
+document.getElementById("passwordInput")
+.addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        checkPassword();
+    }
+});
+
+/* Floating Hearts */
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    document.body.appendChild(heart);
+    setTimeout(()=> heart.remove(),7000);
+}
+
+setInterval(createHeart,700);
+</script>
+
+</body>
+  </html>
